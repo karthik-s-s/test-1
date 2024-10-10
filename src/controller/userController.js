@@ -12,7 +12,7 @@ exports.register = async (req, res) => {
   try {
     let hashedPwd = await bcrypt.hash(password, 10);
 
-    let newUser = await User.create({ userName, password });
+    let newUser = await User.create({ userName, hashedPwd });
     return res.json({ msg: 'User registered', status: true });
   } catch (error) {
     return res.status(400).json({ msg: 'err', status: false });
