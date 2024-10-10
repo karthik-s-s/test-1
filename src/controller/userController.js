@@ -55,7 +55,7 @@ exports.chatImport = async (req, res) => {
       });
     }
 
-    return res.json({ msg: 'Chat processed successfully', status: true });
+    return res.json({ msg: 'Chat processed successfully',data:data, status: true });
   } catch (error) {
     return res.status(400).json({ msg: 'err', status: false });
   }

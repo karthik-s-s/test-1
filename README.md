@@ -84,6 +84,7 @@ To run the application, follow these steps:
   ```json
   {
     "msg": "Chat processed successfully",
+    "data":"processed chat",
     "status": true
   }
   ```
