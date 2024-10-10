@@ -1,7 +1,7 @@
 ## TEST APPLICATION
 
 This project includes feature like User Registration,
-login, importing data from excel sheet store and a Get APi for filtering data.
+login, importing data from excel sheet storing and a Get APi for filtering data.
 
 ## Database Design
 
