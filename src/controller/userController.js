@@ -45,7 +45,8 @@ exports.chatImport = async (req, res) => {
   try {
     const file = req.file;
     const workBook = xlxx.readFile(file.path);
-    const data = XLSX.utils.json_to_sheet(workBook);
+    const sheets = workBook.sheets[workBook.SheetNames[0]]
+    const data = XLSX.utils.json_to_sheet(sheets);
 
     for (const row of data) {
       const user = await Chat.create({
